@@ -11,6 +11,7 @@ var both = ['client','server'],
         'ostrio:instagram-node@0.5.8',
         'bozhao:accounts-instagram@0.1.2',
         'service-configuration',
+        'http',
         'tracker',
         'session',
         'templating',
@@ -34,6 +35,7 @@ Package.onUse(function(api) {
 
     api.addFiles([
       'lib/server/methods.js',
+      'lib/server/users.js',
       'lib/server/accounts.js'
     ], 'server')
 })
