@@ -1,7 +1,7 @@
 Package.describe({
   name: 'heaven7:instagram',
   version: '0.0.1',
-  summary: 'API wrapper package to retreive user data from intragram',
+  summary: 'API wrapper package to retreive user data from instagram',
   git: 'https://github.com/heaven7/intragram.git',
   documentation: 'README.md'
 })
@@ -22,6 +22,7 @@ var both = ['client','server'],
 ]
 
 Package.onUse(function(api) {
+    api.versionsFrom("1.2")
     api.use(packages, both)
     api.imply(packages)
 
