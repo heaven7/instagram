@@ -9,7 +9,7 @@ Package.describe({
 var both = ['client','server'],
     packages = [
         'ostrio:instagram-node@0.5.8',
-        'kadira:flow-router@2.0.2',
+        'bozhao:accounts-instagram@0.1.2',
         'service-configuration',
         'tracker',
         'session',
@@ -33,6 +33,7 @@ Package.onUse(function(api) {
     ], 'client')
 
     api.addFiles([
-      'lib/server/methods.js'
+      'lib/server/methods.js',
+      'lib/server/accounts.js'
     ], 'server')
 })
