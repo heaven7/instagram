@@ -49,7 +49,9 @@ should show the access token. Something like
 Object {accessToken: "3035947344.aee9283.53fe981b5b98445da7ff425d3949ddee"}
 ```
 
-## Followers count
+## User data
+
+### Followers count
 You can get the instagram followers count of the user by
 ```html
 <template name="mytemplate">
@@ -60,6 +62,39 @@ or with the meteor method
 ```javascript
 Meteor.call('getUserFollowersCount', userId, (err, res) => {
 	console.log(err, res)
+	// do something with the error and result
+})
+```
+
+### User media
+Get the list of recent media published by the user.
+https://www.instagram.com/developer/endpoints/users/#get_users_media_recent
+```javascript
+// optional options object
+let options = { 
+	count,
+    max_timestamp,
+    min_timestamp,
+    max_id,
+    min_id
+}
+
+Meteor.call('getUserMedia', userId, options, (err, res) => {
+	// do something with the error and result
+})
+```
+
+### User liked media
+Get the list of recent media liked by the user
+https://www.instagram.com/developer/endpoints/users/#get_users_feed_liked
+```javascript
+// optional options object
+let options = { 
+	count, 
+	max_like_id  
+}
+
+Meteor.call('getUserMediaLiked', userId, options, (err, res) => {
 	// do something with the error and result
 })
 ```
