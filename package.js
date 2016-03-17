@@ -2,7 +2,7 @@ Package.describe({
   name: 'heaven7:instagram',
   version: '0.0.1',
   summary: 'API wrapper package to retreive user data from instagram',
-  git: 'https://github.com/heaven7/intragram.git',
+  git: 'https://github.com/heaven7/instagram.git',
   documentation: 'README.md'
 })
 
